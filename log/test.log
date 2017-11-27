@@ -1,0 +1,317 @@
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "surveys"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_type" boolean, "rating" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20171001234117)[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170925060235);
+
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2017-10-02 03:35:37.063314"], ["updated_at", "2017-10-02 03:35:37.063314"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (1.0ms)[0m  [1m[31mDELETE FROM "surveys"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.8ms)[0m  [1m[31mDELETE FROM "surveys"[0m
+  [1m[35m (2.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "surveys"[0m
+  [1m[35m (3.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "surveys"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "surveys"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "surveys"[0m
+  [1m[35m (3.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "surveys"[0m
+  [1m[35m (3.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "surveys"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "surveys"[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "surveys"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "user_type", "rating", "created_at", "updated_at", "id") VALUES ('MyString', 'f', 1, '2017-10-02 04:44:12.575003', '2017-10-02 04:44:12.575003', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "user_type", "rating", "created_at", "updated_at", "id") VALUES ('MyString', 'f', 1, '2017-10-02 04:44:12.575003', '2017-10-02 04:44:12.575003', 298486374)[0m
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------
+PagesTest: test_should_get_root
+-------------------------------
+Started GET "/" for 127.0.0.1 at 2017-10-02 12:44:12 +0800
+Processing by SurveysController#index as HTML
+  Rendering surveys/index.html.erb within layouts/application
+  Rendered surveys/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 199ms (Views: 190.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+PagesTest: test_should_get_thank
+--------------------------------
+Started GET "/thank" for 127.0.0.1 at 2017-10-02 12:44:13 +0800
+Processing by SurveysController#thank as HTML
+  Rendering surveys/thank.html.erb within layouts/application
+  Rendered surveys/thank.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+PagesTest: test_should_get_new_surveys
+--------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------
+PagesTest: test_should_get_surveys
+----------------------------------
+Started GET "/surveys" for 127.0.0.1 at 2017-10-02 12:44:13 +0800
+Processing by SurveysController#index as HTML
+  Rendering surveys/index.html.erb within layouts/application
+  Rendered surveys/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "surveys"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "user_type", "rating", "created_at", "updated_at", "id") VALUES ('MyString', 'f', 1, '2017-10-02 04:45:24.473515', '2017-10-02 04:45:24.473515', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "user_type", "rating", "created_at", "updated_at", "id") VALUES ('MyString', 'f', 1, '2017-10-02 04:45:24.473515', '2017-10-02 04:45:24.473515', 298486374)[0m
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------
+PagesTest: test_should_get_surveys
+----------------------------------
+Started GET "/surveys" for 127.0.0.1 at 2017-10-02 12:45:24 +0800
+Processing by SurveysController#index as HTML
+  Rendering surveys/index.html.erb within layouts/application
+  Rendered surveys/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 142ms (Views: 132.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+PagesTest: test_should_get_new_surveys
+--------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------
+PagesTest: test_should_get_root
+-------------------------------
+Started GET "/" for 127.0.0.1 at 2017-10-02 12:45:24 +0800
+Processing by SurveysController#index as HTML
+  Rendering surveys/index.html.erb within layouts/application
+  Rendered surveys/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+PagesTest: test_should_get_thank
+--------------------------------
+Started GET "/thank" for 127.0.0.1 at 2017-10-02 12:45:24 +0800
+Processing by SurveysController#thank as HTML
+  Rendering surveys/thank.html.erb within layouts/application
+  Rendered surveys/thank.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "surveys"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "user_type", "rating", "created_at", "updated_at", "id") VALUES ('MyString', 'f', 1, '2017-10-02 04:45:38.685413', '2017-10-02 04:45:38.685413', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "user_type", "rating", "created_at", "updated_at", "id") VALUES ('MyString', 'f', 1, '2017-10-02 04:45:38.685413', '2017-10-02 04:45:38.685413', 298486374)[0m
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------
+PagesTest: test_should_get_root
+-------------------------------
+Started GET "/" for 127.0.0.1 at 2017-10-02 12:45:38 +0800
+Processing by SurveysController#index as HTML
+  Rendering surveys/index.html.erb within layouts/application
+  Rendered surveys/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 125ms (Views: 116.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------
+PagesTest: test_should_get_surveys
+----------------------------------
+Started GET "/surveys" for 127.0.0.1 at 2017-10-02 12:45:39 +0800
+Processing by SurveysController#index as HTML
+  Rendering surveys/index.html.erb within layouts/application
+  Rendered surveys/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+PagesTest: test_should_get_thank
+--------------------------------
+Started GET "/thank" for 127.0.0.1 at 2017-10-02 12:45:39 +0800
+Processing by SurveysController#thank as HTML
+  Rendering surveys/thank.html.erb within layouts/application
+  Rendered surveys/thank.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+PagesTest: test_should_get_new_surveys
+--------------------------------------
+Started GET "/surveys/new" for 127.0.0.1 at 2017-10-02 12:45:39 +0800
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (87.9ms)
+Completed 200 OK in 96ms (Views: 89.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "surveys" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "surveys"[0m
+  [1m[36mFixture Insert (0.8ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "user_type", "rating", "created_at", "updated_at", "id") VALUES ('MyString', 'f', 1, '2017-10-02 06:40:09.884223', '2017-10-02 06:40:09.884223', 980190962)[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "user_type", "rating", "created_at", "updated_at", "id") VALUES ('MyString', 'f', 1, '2017-10-02 06:40:09.884223', '2017-10-02 06:40:09.884223', 298486374)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "surveys" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+----------------------------------
+PagesTest: test_should_get_surveys
+----------------------------------
+Started GET "/surveys" for 127.0.0.1 at 2017-10-02 14:40:10 +0800
+Processing by SurveysController#index as HTML
+  Rendering surveys/index.html.erb within layouts/application
+  Rendered surveys/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 189ms (Views: 180.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------
+PagesTest: test_should_get_new_surveys
+--------------------------------------
+Started GET "/surveys/new" for 127.0.0.1 at 2017-10-02 14:40:10 +0800
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 20ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+-------------------------------
+PagesTest: test_should_get_root
+-------------------------------
+Started GET "/" for 127.0.0.1 at 2017-10-02 14:40:10 +0800
+Processing by SurveysController#index as HTML
+  Rendering surveys/index.html.erb within layouts/application
+  Rendered surveys/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+--------------------------------
+PagesTest: test_should_get_thank
+--------------------------------
+Started GET "/thank" for 127.0.0.1 at 2017-10-02 14:40:10 +0800
+Processing by SurveysController#thank as HTML
+  Rendering surveys/thank.html.erb within layouts/application
+  Rendered surveys/thank.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "surveys" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.6ms)[0m  [1m[31mDELETE FROM "surveys"[0m
+  [1m[36mFixture Insert (0.6ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "user_type", "rating", "created_at", "updated_at", "id") VALUES ('MyString', 'f', 1, '2017-10-02 06:50:23.092627', '2017-10-02 06:50:23.092627', 980190962)[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "user_type", "rating", "created_at", "updated_at", "id") VALUES ('MyString', 'f', 1, '2017-10-02 06:50:23.092627', '2017-10-02 06:50:23.092627', 298486374)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "surveys" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------
+PagesTest: test_should_get_new_surveys
+--------------------------------------
+Started GET "/surveys/new" for 127.0.0.1 at 2017-10-02 14:50:23 +0800
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 153ms (Views: 139.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+--------------------------------
+PagesTest: test_should_get_thank
+--------------------------------
+Started GET "/thank" for 127.0.0.1 at 2017-10-02 14:50:23 +0800
+Processing by SurveysController#thank as HTML
+  Rendering surveys/thank.html.erb within layouts/application
+  Rendered surveys/thank.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+-------------------------------
+PagesTest: test_should_get_root
+-------------------------------
+Started GET "/" for 127.0.0.1 at 2017-10-02 14:50:23 +0800
+Processing by SurveysController#index as HTML
+  Rendering surveys/index.html.erb within layouts/application
+  Rendered surveys/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+----------------------------------
+PagesTest: test_should_get_surveys
+----------------------------------
+Started GET "/surveys" for 127.0.0.1 at 2017-10-02 14:50:23 +0800
+Processing by SurveysController#index as HTML
+  Rendering surveys/index.html.erb within layouts/application
+  Rendered surveys/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m

@@ -1,0 +1,190 @@
+<div class="ui container middle aligned" style="text-align: left">	
+	<div class="ui raised very padded segment" style="margin-top: 100px">
+
+		<h1 class="ui center aligned header">Weighing Quality Sub-Characteristics of Functional Suitability</h1>
+		<br>		
+		<br>
+		<%= form_for (@survey), html: {class: 'ui form', name: 'getWeightsForm'} do |form| %>
+			<% if @survey.errors.any? %>
+			    <div id="error_explanation" class="ui message" style="height: 200px; overflow: scroll; overflow-x: hidden">
+			      <h2 class="ui header">
+			        <%= pluralize(@survey.errors.count, "error") %> prohibited
+			        this survey form from being submitted:
+			      </h2>
+			      <ul class="ui list">
+			        <% @survey.errors.full_messages.each do |msg| %>
+			          <li class="item"><%= msg %></li>
+			        <% end %>
+			      </ul>
+			    </div>
+			<% end %>
+
+		<div class="ui grid">
+			<div class="two column row">
+				<div class="column">
+					<br>
+					<p><strong>Instructions: </strong>Please input your name and check whether you are a user or a developer. Afterwards, please rate the following characteristics according to your preference. The definitions of each characteristic can also be found below if you click on each of the characteristic.</p>
+					
+					<p><strong>Functional Suitability: </strong>degree to which a product or system provides functions that meet stated and implied needs when used under specified conditions.</p>
+					
+					<br>
+					<div class="inline field" style="width: 300px">
+						<%= form.label :name %>
+						<%= form.text_field :name, placeholder: "Last Name, First Name" %>
+					</div>
+					<br>
+					<div class="inline fields">
+						<label>I am a:</label>
+						<div class="field">
+					    	<div class="ui radio checkbox">
+					       		<%= form.radio_button :user_type, 'developer', :checked => true %> 
+								<%= form.label :user_type, "Developer" %>
+					    	</div>
+					   	</div>
+					   	<div class="field">
+					    	<div class="ui radio checkbox">
+					       		<%= form.radio_button :user_type, 'user' %>
+								<%= form.label :user_type, "User" %>
+					     	</div>
+					   	</div>
+					</div>
+					<br>
+					<br>
+					<p style="text-align: center">The following are the definitions of each quality sub-characteristic under Usability as stated in the <strong>ISO/IEC 25010 Standard Model</strong>:
+					<br>
+					<div class="ui list">
+						<a class="item">
+							<i class="right triangle icon"></i>
+							<div class="content">
+								<div class="header" style="cursor:pointer" id="fs">Functional Completeness</div>
+								<div class="description">This characteristic refers to the degree to which the set of functions covers all the specified tasks and user objectives.</div>
+							</div>
+						</a>
+						<br>
+						<a class="item">
+							<i class="right triangle icon"></i>
+							<div class="content">
+								<div class="header" style="cursor:pointer" id="rel">Functional Correctness </div>
+								<div class="description">This characteristic refers to the degree to which a product or system provides the correct results with the needed degree of precision.</div>
+							</div>
+						</a>
+						<br>
+						<a class="item">
+							<i class="right triangle icon"></i>
+							<div class="content">
+								<div class="header" style="cursor:pointer" id="pe">Functional Appropriateness</div>
+								<div class="description">This characteristic refers to the degree to which the functions facilitate the accomplishment of specified tasks and objectives.</div>
+							</div>
+						</a>
+						<br>
+					</div>
+				</div>
+				<div class="column">
+					<table class="ui selectable table"> 
+						<tbody>
+							<tr>
+								<td>
+									<!-- Functional Completeness vs Functional Correctness -->
+									<h4 class="ui right floated header">Functional Completeness</h4>
+									<h4 class="ui left floated header">Functional Correctness</h4>							
+									<%= form.range_field :fcm_fcr, :min=>1, :max=>9, :value=>5, :id=>"fcm_fcr_input_id", :onchange=>"fcm_fcr(this.value)"%>
+									<h5 class="ui green center aligned header" name="fcm_fcr_output" id="fcm_fcr_output_id">Equally prefers Functional Correctness and Functional Completeness</h5>
+									
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<!-- Functional Completeness vs Functional Appropriateness -->
+									<h4 class="ui right floated header">Functional Completeness</h4>
+									<h4 class="ui left floated header">Functional Appropriateness</h4>
+									<%= form.range_field :fcm_fa, :min=>1, :max=>9, :value=>5, :id=>"fcm_fa_input_id", :onchange=>"fcm_fa(this.value)"%>
+									<h5 class="ui green center aligned header" name="fcm_fa_output" id="fcm_fa_output_id">Equally prefers Functional Completeness and Functional Appropriateness</h5>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<!-- Functional Correctness vs Functional Appropriateness -->
+									<h4 class="ui right floated header">Functional Correctness</h4>
+									<h4 class="ui left floated header">Functional Appropriateness</h4>
+									<%= form.range_field :fcr_fa, :min=>1, :max=>9, :value=>5, :id=>"fcr_fa_input_id", :onchange=>"fcr_fa(this.value)"%>
+									<h5 class="ui green center aligned header" name="fcr_fa_output" id="fcr_fa_output_id">Equally prefers Functional Correctness and Functional Appropriateness</h5>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="ui grid center aligned">
+			<div class="three column row">
+				<div class="column"></div>
+				<div class="column">
+						<%= form.submit "Submit Survey", class: "positive ui button" %>
+						<br>
+					<% end %>
+				</div>
+				<div class="column"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- modals -->
+<div class="ui small modal" id="fsmodal">
+	<i class="close icon"></i>
+	<div class="header">Appropriate Recognizability</div>
+	<div class="content">
+		<p>This characteristic represents the degree to which a product or system provides functions that meet stated and implied needs when used under specified conditions.</p>
+	</div>
+</div>
+<div class="ui small modal" id="relmodal">
+	<i class="close icon"></i>
+	<div class="header">Learnability</div>
+	<div class="content">
+		<p>This characteristic refers to the degree to which a system, a product or component performs specified functions under specified conditions for a specified period of time.</p>
+	</div>
+</div>
+<div class="ui small modal" id="pemodal">
+	<i class="close icon"></i>
+	<div class="header">Operability</div>
+	<div class="content">
+		<p>This characteristic represents the performance relative to the amount of resources used under stated conditions.</p>
+	</div>
+</div>
+<div class="ui small modal" id="opmodal">
+	<i class="close icon"></i>
+	<div class="header">User Error Protection</div>
+	<div class="content">
+		<p>This characteristic refers to the degree to which a product or system can be used by specified users to achieve specified goals with effectiveness, efficiency and satisfaction in a specified context of use.</p>
+	</div>
+</div>
+<div class="ui small modal" id="secmodal">
+	<i class="close icon"></i>
+	<div class="header">User Interface Aesthetics</div>
+	<div class="content">
+		<p>This characteristic refers to the degree to which a product or system protects information and data so that persons or other products or systems have the degree of data access appropriate to their types and levels of authorization.</p>
+	</div>
+</div>
+</div>
+<div class="ui small modal" id="compmodal">
+	<i class="close icon"></i>
+	<div class="header">Accessibility</div>
+	<div class="content">
+		<p>This characteristic refers to the degree to which a product, system or component can exchange information with other products, systems or components, and/or perform its required functions, while sharing the same hardware or software environment.</p>
+	</div>
+</div>
+<div class="ui small modal" id="maintmodal">
+	<i class="close icon"></i>
+	<div class="header">Perceived Usefulness</div>
+	<div class="content">
+		<p>This characteristic represents the degree of effectiveness and efficiency with which a product or system can be modified to improve it, correct it or adapt it to changes in environment, and in requirements.</p>
+	</div>
+</div>
+<div class="ui small modal" id="transmodal">
+	<i class="close icon"></i>
+	<div class="header">Perceived Ease of Use</div>
+	<div class="content">
+		<p>This characteristic refers to the degree of effetiveness and efficiency with which a system, product or component can be transferred from one hardware, software or other operational or usage environment to another.</p>
+	</div>
+</div>

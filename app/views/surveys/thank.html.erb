@@ -1,0 +1,69 @@
+<div class="ui container middle aligned">	
+	<div class="ui raised segment" style="margin-top: 100px; min-height: 700px; text-align: center">
+		<h1 class="ui center aligned header" style="margin-bottom: 50px">Thank you for answering our survey!</h1>
+		
+		As a <strong><%= @user_type %></strong>, these are the obtained weights of the 3 quality sub-characteristics based on your answers.
+		<br>
+		<div class="ui mini green four statistics" style="margin-top: 30px">
+		  <div class="statistic">
+		    <div class="value">
+		      <%= @fcm %>%
+		    </div>
+		    <div class="label">
+		      Functional Completeness
+		    </div>
+		  </div>
+		  <div class="statistic">
+		    <div class="value">
+		      <%= @fcr %>%
+		    </div>
+		    <div class="label">
+		      Functional Correctness
+		    </div>
+		  </div>
+		  <div class="statistic">
+		    <div class="value">
+		      <%= @fa %>%
+		    </div>
+		    <div class="label">
+		      Functional Appropriateness
+		    </div>
+		  </div>
+		</div>
+		
+		<br>
+		<br>
+		<br>
+		<br>
+		These are the <strong>average</strong> obtained weights of the 3 quality sub-characteristics based on all <strong><%= @user_type %></strong>'s answers.
+		<br>
+		<div class="ui mini green four statistics" style="margin-top: 30px">
+		  <div class="statistic">
+		    <div class="value">
+		      <%= @fcm_ave %>%
+		    </div>
+		    <div class="label">
+		      Functional Completeness
+		    </div>
+		  </div>
+		  <div class="statistic">
+		    <div class="value">
+		      <%= @fcr_ave %>%
+		    </div>
+		    <div class="label">
+		      Functional Correctness
+		    </div>
+		  </div>
+		  <div class="statistic">
+		    <div class="value">
+		      <%= @fa_ave %>%
+		    </div>
+		    <div class="label">
+		      Functional Appropriateness
+		    </div>
+		  </div>
+		</div>
+	
+		
+	</div>
+</div>
